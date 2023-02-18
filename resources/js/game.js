@@ -2,8 +2,12 @@ import Tile from "./Tile";
 
 export default {
         guessesAllow: 3,
+        theWord: 'cat',
         wordLength: 3,
         currentRowIndex: 0,
+        get currentGuess(){
+           return  this.currentRow.map(tile => tile.letter).join('');
+        },
 
         init() {
             this.board = Array.from({ length: this.guessesAllow }, () => {
@@ -13,11 +17,13 @@ export default {
         onKeyPress(key){
             if(/^[A-z]$/.test(key)){
                 this.fillTile(key);
+            }else if (key === 'Enter'){
+                this.submitGuess();
             }
 
         },
         fillTile(key) {
-            for(let tile of this.currentRow()){
+            for(let tile of this.currentRow){
                 if(! tile.letter){
                     tile.fill(key);
 
@@ -25,16 +31,22 @@ export default {
                 }
 
             }
+        },
 
-            if (this.currentTileIndex === this.wordLength - 1){
-                this.currentRowIndex++;
-                this.currentTileIndex = 0;
+        submitGuess(){
+            let guess = this.currentGuess
+            if(guess.length < this.wordLength){
+                return;
+            }
+            if(guess === this.theWord){
+                alert('You win!');
             }else{
-                this.currentTileIndex++;
+                alert('Nope')
+                this.currentRowIndex++;
             }
         },
 
-        currentRow(){
+        get currentRow(){
             return this.board[this.currentRowIndex];
         }
 }
