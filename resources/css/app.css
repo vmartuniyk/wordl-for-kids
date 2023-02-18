@@ -9,8 +9,10 @@ body {
     font-family: sans-serif;
 }
 #game {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+}
+.row {
+    display: flex;
 }
 .tile {
     width: 100px;

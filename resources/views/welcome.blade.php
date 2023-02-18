@@ -10,21 +10,21 @@
 </head>
 <body>
     <div id="game">
-        <div class="row">
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-        </div>
-        <div class="row">
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-        </div>
-        <div class="row">
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-        </div>
+{{--            <div class="row">--}}
+{{--                <div class="tile"></div>--}}
+{{--                <div class="tile"></div>--}}
+{{--                <div class="tile"></div>--}}
+{{--            </div>--}}
+{{--            <div class="row">--}}
+{{--                <div class="tile"></div>--}}
+{{--                <div class="tile"></div>--}}
+{{--                <div class="tile"></div>--}}
+{{--            </div>--}}
+{{--            <div class="row">--}}
+{{--                <div class="tile"></div>--}}
+{{--                <div class="tile"></div>--}}
+{{--                <div class="tile"></div>--}}
+{{--            </div>--}}
     </div>
 </body>
 </html>
