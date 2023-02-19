@@ -8,7 +8,7 @@
         "dest": "/api/index.php"
     }],
     "env": {
-        "APP_ENV": "develop",
+        "APP_ENV": "production",
         "APP_DEBUG": "false",
         "APP_URL": "https://wordl-for-kids.vercel.app",
 
