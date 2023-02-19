@@ -23,6 +23,17 @@ body {
     outline: 1px solid currentColor;
     font-size: 2rem;
 }
+.tile.absent{
+    background-color: #666;
+}
+
+.tile.present{
+    background-color: yellow;
+    color: black;
+}
+.tile.correct{
+    background-color: green;
+}
 output {
     font-size: 1.3rem;
     text-align: center;

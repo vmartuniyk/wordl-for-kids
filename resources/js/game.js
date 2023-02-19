@@ -42,6 +42,9 @@ export default {
             if(guess.length < this.theWord.length){
                 return;
             }
+            //update tile colors
+            this.refreshTileStatusForCurrentRow();
+
             if(guess === this.theWord){
                 this.message = 'You win!';
             }else if (this.guessesAllow === this.currentRowIndex + 1){
@@ -52,6 +55,16 @@ export default {
                 this.message = 'Incorrect';
                 this.currentRowIndex++;
             }
+
+        },
+        refreshTileStatusForCurrentRow(){
+            this.currentRow.forEach((tile,index) => {
+                tile.status = this.theWord.includes(tile.letter) ? 'present' : 'absent';
+
+                if(this.currentGuess[index] === this.theWord[index]){
+                    tile.status = 'correct';
+                }
+            });
         },
 
         get currentRow(){
